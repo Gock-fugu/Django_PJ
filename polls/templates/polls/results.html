@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результати</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+        }
+        .score {
+            font-size: 2rem;
+            color: #28a745;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ваш результат</h1>
+        <p class="score">{{ score }}</p>
+        {% if score <= 5 %}
+        <p>Ти мій ідеал, я б тебе виїбав!</p>
+        {% elif score >= 7.5 and score <= 20 %}
+        <p>Ой фууу! Але нічо, всі не без гріха.</p>
+        {% elif score >= 22.5 and score <= 35 %}
+        <p>Бляяять, який ти огидний нахуй!</p>
+        {% elif score >= 37.5 and score <= 50 %}
+        <p>Який ти кінчений! Застреліть його хтось!</p>
+        {% elif score > 50 %}
+        <p>Ну ти й хворий ВИБЛЯДОК! 10 год тюрми блять!</p>
+        {% endif %}
+        <a href="{% url 'polls:index' %}">На головну</a>
+    </div>
+</body>
+</html>
