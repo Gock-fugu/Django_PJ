@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','mysite.onrender.com']
+ALLOWED_HOSTS = ['https://django-pj-bsd1.onrender.com']
 
 
 # Application definition
