@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@9jzsfil%z427v(_67ye))_p$h_j^h&mh#pvry%fqr*le8ox#h'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -77,14 +77,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
-        'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://fugu:Dagger312@localhost:5432/questions',
-        conn_max_age=600
-    )
-    }
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+}
+
 
 
 # Password validation
