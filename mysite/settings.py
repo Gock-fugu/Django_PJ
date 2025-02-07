@@ -37,7 +37,7 @@ ALLOWED_HOSTS = ['django-pj-ixpk.onrender.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+    'polls.apps.MyAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
