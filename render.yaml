@@ -1,5 +1,5 @@
 databases:
-  - name: mysite
+  - name: questions
     plan: free
     databaseName: questions
     user: fugu
@@ -10,11 +10,11 @@ services:
     name: mysite
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python -m gunicorn mysite.wsgi:application -k uvicorn.workers.UvicornWorker"
+    startCommand: "gunicorn mysite.wsgi"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysitedb
+          name: questions
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
