@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ['https://django-pj-ixpk.onrender.com']
+ALLOWED_HOSTS = ['django-pj-ixpk.onrender.com']
 
 
 # Application definition
