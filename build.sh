@@ -6,5 +6,7 @@ set -o errexit
 pip install -r requirements.txt
 
 # Apply any outstanding database migrations
-python manage.py migrate
-python createsuperuser.py
+
+python manage.py migrate --noinput
+python manage.py createsuperuser --noinput
+
