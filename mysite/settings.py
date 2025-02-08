@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['mysite-6n1f.onrender.com']
