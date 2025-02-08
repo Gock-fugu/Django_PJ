@@ -31,9 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ['mysite-6n1f.onrender.com
-
-']
+ALLOWED_HOSTS = ['mysite-6n1f.onrender.com']
 
 
 # Application definition
