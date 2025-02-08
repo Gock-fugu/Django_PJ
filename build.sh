@@ -7,6 +7,6 @@ pip install -r requirements.txt
 
 # Apply any outstanding database migrations
 
-python manage.py migrate --noinput
-python manage.py createsuperuser --noinput
+python manage.py migrate 
+
 
